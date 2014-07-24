@@ -1,7 +1,6 @@
 "auto formatting
 syntax on
-set smartindent
-set tabstop=4
+set tabstop=4 shiftwidth=4 expandtab smartindent
 set number
 
 "for ctags
@@ -17,3 +16,6 @@ set tags=tags;
 "mapping keys for tab switching
 nmap ; gT
 nmap ' gt
+
+"getting from insertion to normal mode
+imap <C-e> <ESC>
