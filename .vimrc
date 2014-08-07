@@ -1,7 +1,8 @@
 "auto formatting
 syntax on
-set tabstop=4 shiftwidth=4 expandtab smartindent
-set number
+set tabstop=4
+set shiftwidth=4 expandtab smartindent
+set number ruler
 
 "for ctags
 let Tlist_Use_Right_Window=1
