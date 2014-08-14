@@ -1,5 +1,5 @@
 "auto formatting
-syntax on
+syntax on 
 set tabstop=4
 set shiftwidth=4 expandtab smartindent
 set number ruler
@@ -20,3 +20,6 @@ nmap ' gt
 
 "getting from insertion to normal mode
 imap <C-e> <ESC>
+
+set t_Co=256
+
