@@ -1,3 +1,6 @@
+"https://github.com/fatih/pathogen
+execute pathogen#infect()
+
 "auto formatting
 syntax on 
 set tabstop=4
