@@ -10,4 +10,4 @@ alias gb='git branch'
 alias gnb='git checkout -b'
 
 # python
-alias python='python3.4'
+alias py='python3.4'
