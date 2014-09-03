@@ -1,2 +1,2 @@
 self-update:
-	find . -name ".*" -exec cp -rf {} ~ \;
+	find . -name ".*" -exec cp -rf {} $(HOME) \;
