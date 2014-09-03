@@ -4,8 +4,13 @@ execute pathogen#infect()
 "auto formatting
 syntax on 
 set tabstop=4
-set shiftwidth=4 expandtab smartindent
-set number ruler
+set shiftwidth=4 
+set ignorecase
+set smartcase
+set expandtab
+set smartindent
+set number
+set ruler
 
 "for ctags
 let Tlist_Use_Right_Window=1
@@ -21,10 +26,14 @@ set tags=tags;
 nmap ; gT
 nmap ' gt
 
+"avoiding shift key
 nmap <Space> :
 
 "getting from insertion to normal mode
 imap <C-e> <ESC>
 
+"better colors
 set t_Co=256
 
+"tabs needed for makefiles
+autocmd FileType make setlocal noexpandtab
