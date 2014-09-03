@@ -21,6 +21,8 @@ set tags=tags;
 nmap ; gT
 nmap ' gt
 
+nmap <Space> :
+
 "getting from insertion to normal mode
 imap <C-e> <ESC>
 
