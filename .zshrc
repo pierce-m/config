@@ -22,4 +22,3 @@ hw() {cd ~/code/personal/hw"$@"}
 # no 'x' key
 alias tm='tmux'
 alias et='exit'
->>>>>>> d7dcd6ac0cd57d0d6b9908ba9c82732275788ef6
