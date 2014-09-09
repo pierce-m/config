@@ -17,3 +17,6 @@ alias gnb='git checkout -b'
 
 # python
 alias py='python3.4'
+
+# hw directory navigation for 162
+hw() {cd ~/code/personal/hw"$@"}
