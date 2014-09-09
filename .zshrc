@@ -5,7 +5,6 @@ fi
 
 # Customize to your needs...
 export GOPATH=$HOME/Git/go
-
 export PATH=/opt/local/bin:/opt/local/sbin:$GOPATH:$PATH
 
 # git aliases
@@ -15,8 +14,12 @@ alias gc='git commit -m'
 alias gb='git branch'
 alias gnb='git checkout -b'
 
-# python
-alias py='python3.4'
+alias python3='python3.4'
 
 # hw directory navigation for 162
 hw() {cd ~/code/personal/hw"$@"}
+
+# no 'x' key
+alias tm='tmux'
+alias et='exit'
+>>>>>>> d7dcd6ac0cd57d0d6b9908ba9c82732275788ef6
