@@ -1,2 +1,2 @@
 self-update:
-	find . -name ".[a-z]*" -not -name ".git" -maxdepth 1 -exec cp -rf {} $(HOME) \;
+	find . -maxdepth 1 -name ".[a-z]*" -not -name ".git" -exec cp -rf {} $(HOME) \;
