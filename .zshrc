@@ -31,9 +31,28 @@ gdb() {emacs -nw --eval "(gdb \"gdb --annotate=3 $*\")";}
 
 # someone is a tipdrill
 who_is_tipdrill() {
-    python -c "from random import randint; roomies = ['Pierce', 'Jai', 'Lucy', 'Jorge', 'Olivia', 'Claire', 'Liz', 'Katy', 'Guy_we_hate']; print(roomies[randint(0, 8)])"
+    python -c \
+"from random import randint; 
+roomies = ['Pierce', 'Jai', 'Lucy', 'Jorge', 'Olivia',
+           'Claire', 'Liz', 'Katy', 'Guy_we_hate'];
+print(roomies[randint(0, 8)])"
 }
     
+tipdrill_stats() {
+    python3 -c \
+"from random import randint;
+roomies = ['Pierce', 'Jai', 'Lucy', 'Jorge', 'Olivia',
+           'Claire', 'Liz', 'Katy', 'Guy_we_hate'];
+roomy_stat={};
+for i in range(0, 1000):
+    name = roomies[randint(0, 8)];
+    if name in roomy_stat:
+        roomy_stat[name] += 1;
+    else:
+        roomy_stat[name] = 0;
+for name, times in roomy_stat.items():
+    print(name, str(round(100 * (float(times) / 1000), 2)) + '%');"
+}
 
 # no 'x' key
 alias tm='tmux'
