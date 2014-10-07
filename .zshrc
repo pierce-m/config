@@ -23,9 +23,6 @@ alias python3='python3.4'
 # grep to print line numbers
 alias gren='nocorrect grep -rn'
 
-# hw directory navigation for 162
-hw() {cd ~/code/personal/hw"$@"}
-
 # run gdb under emacs from command line
 gdb() {emacs -nw --eval "(gdb \"gdb --annotate=3 $*\")";}
 
