@@ -1,4 +1,5 @@
 "https://github.com/fatih/pathogen
+
 execute pathogen#infect()
 
 "auto formatting
@@ -25,6 +26,15 @@ set tags=tags;
 "mapping keys for tab switching
 nmap ; gT
 nmap ' gt
+
+"avoiding z
+nmap <C-a> <C-z>
+
+"getting to .vimrc
+nmap <C-x> :tabnew ~/.vimrc<ENTER>
+
+"easier sourcing
+nmap <C-m> :so ~/.vimrc<ENTER>
 
 "avoiding shift key
 nmap <Space> :
