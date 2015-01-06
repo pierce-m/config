@@ -4,7 +4,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 export GOPATH=$HOME/Git/go
-export PATH=/opt/local/bin:/opt/local/sbin:$GOPATH:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:$HOME/git/executables:$GOPATH:$PATH
 
 # git aliases
 alias glog='git log --oneline'
@@ -24,7 +24,7 @@ alias python3='python3.4'
 alias gren='nocorrect grep -rn'
 
 # run gdb under emacs from command line
-gdb() {emacs -nw --eval "(gdb \"gdb --annotate=3 $*\")";}
+gdb() {emacs -nw --eval "(gdb \"gdb-apple --annotate=3 $*\")";}
 
 # someone is a tipdrill
 who_is_tipdrill() {
