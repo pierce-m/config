@@ -34,7 +34,7 @@ nmap <C-a> <C-z>
 nmap <C-x> :tabnew ~/.vimrc<ENTER>
 
 "easier sourcing
-nmap <C-m> :so ~/.vimrc<ENTER>
+nmap <C-p> :so ~/.vimrc<ENTER>
 
 "avoiding shift key
 nmap <Space> :
