@@ -1,9 +1,10 @@
-export PYTHONPATH=/usr/lib/python2.7/site-packages:${PYTHONPATH}
-
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
+
+# macports 
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 # git aliases
 alias glog='git log --oneline'
@@ -24,6 +25,9 @@ alias gren='nocorrect grep -rn'
 
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+
+# run gdb under emacs from command line
+gdbtool () { emacs -nw --eval "(gdb \"gdb --annotate=3 -i=mi $*\")";}
 
 # no 'x' key
 alias tm='tmux'
