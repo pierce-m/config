@@ -12,6 +12,7 @@ set expandtab
 set smartindent
 set number
 set ruler
+set incsearch
 
 "for ctags
 let Tlist_Use_Right_Window=1
