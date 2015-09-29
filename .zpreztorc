@@ -8,6 +8,7 @@
 #
 # General
 #
+
 # Set case-sensitivity for completion, history lookup, etc.
 # zstyle ':prezto:*:*' case-sensitive 'yes'
 
@@ -23,6 +24,7 @@ zstyle ':prezto:*:*' color 'yes'
 # Set the Prezto modules to load (browse modules).
 # The order matters.
 zstyle ':prezto:load' pmodule \
+  'syntax-highlighting' \
   'environment' \
   'terminal' \
   'editor' \
@@ -31,7 +33,7 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
-  'git'\
+  'git' \
   'prompt'
 
 #
@@ -39,10 +41,10 @@ zstyle ':prezto:load' pmodule \
 #
 
 # Set the key mapping style to 'emacs' or 'vi'.
-zstyle ':prezto:module:editor' key-bindings 'emacs'
+zstyle ':prezto:module:editor' key-bindings 'vi'
 
 # Auto convert .... to ../..
-# zstyle ':prezto:module:editor' dot-expansion 'yes'
+zstyle ':prezto:module:editor' dot-expansion 'yes'
 
 #
 # Git
@@ -86,6 +88,7 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 zstyle ':prezto:module:prompt' theme 'sorin'
+
 #
 # Ruby
 #
@@ -116,17 +119,18 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 
 # Set syntax highlighters.
 # By default, only the main highlighter is enabled.
-# zstyle ':prezto:module:syntax-highlighting' highlighters \
-#   'main' \
-#   'brackets' \
-#   'pattern' \
-#   'cursor' \
-#   'root'
+zstyle ':prezto:module:syntax-highlighting' highlighters \
+  'main' \
+#  'brackets' \
+#  'pattern' \
+#  'cursor' \
+#  'root'
 #
+
 # Set syntax highlighting styles.
-# zstyle ':prezto:module:syntax-highlighting' styles \
-#   'builtin' 'bg=blue' \
-#   'command' 'bg=blue' \
+#zstyle ':prezto:module:syntax-highlighting' styles \
+#  'builtin' 'bg=blue' \
+#  'command' 'bg=green'
 #   'function' 'bg=blue'
 
 #
@@ -151,3 +155,6 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 
 # Auto start a session when Zsh is launched in a SSH connection.
 # zstyle ':prezto:module:tmux:auto-start' remote 'yes'
+
+# Integrate with iTerm2.
+# zstyle ':prezto:module:tmux:iterm' integrate 'yes'
