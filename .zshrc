@@ -3,8 +3,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# macports 
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=/usr/local/bin:/opt/local/bin:/opt/local/sbin:$PATH
+
 
 # git aliases
 alias glog='git log --oneline'
@@ -18,17 +18,15 @@ alias gch='git checkout'
 alias gb='git branch'
 alias gnb='git checkout -b'
 
-alias python3='python3.4'
-
 # grep to print line numbers
 alias gren='nocorrect grep -rn'
 
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
-
 # run gdb under emacs from command line
-gdbtool () { emacs -nw --eval "(gdb \"gdb --annotate=3 -i=mi $*\")";}
+gdb() {emacs -nw --eval "(gdb \"gdb-apple --annotate=3 $*\")";}
 
 # no 'x' key
 alias tm='tmux'
 alias et='exit'
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
