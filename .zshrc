@@ -5,7 +5,6 @@ fi
 
 export PATH=/usr/local/bin:/opt/local/bin:/opt/local/sbin:$PATH
 
-
 # git aliases
 alias glog='git log --oneline'
 alias gst='git status'
@@ -21,12 +20,10 @@ alias gnb='git checkout -b'
 # grep to print line numbers
 alias gren='nocorrect grep -rn'
 
-# run gdb under emacs from command line
-gdb() {emacs -nw --eval "(gdb \"gdb-apple --annotate=3 $*\")";}
-
 # no 'x' key
 alias tm='tmux'
 alias et='exit'
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
